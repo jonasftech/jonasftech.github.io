@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonas' Portfolio</title>
+
+    <style>
+        /* Allgemeine Stile */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            position: relative;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sprachumschalter */
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        .language-switch img {
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+        }
+        .language-switch img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Projekte */
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        /* Fähigkeiten */
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            background-color: #ecf0f1;
+            padding: 8px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            .language-switch {
+                top: 5px;
+                right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sprachumschalter -->
+    <div class="language-switch">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="Deutsch" onclick="switchLanguage('de')" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" onclick="switchLanguage('en')" />
+    </div>
+
+    <!-- Header -->
+    <h1 id="title">Hallo, ich bin Jonas!</h1>
+    <p id="intro">
+        Ich bin 25 Jahre alt, in München aufgewachsen und bringe mir derzeit selbstständig das Programmieren bei.  
+        Mein Ziel ist es, eine Ausbildung als Fachinformatiker für Anwendungsentwicklung zu absolvieren.  
+        Aktuell konzentriere ich mich auf Web Development und plane als Nächstes, mit Python durchzustarten.
+    </p>
+    
+    <!-- Fähigkeiten -->
+    <h2 id="skills-title">Meine Fähigkeiten</h2>
+    <div class="skills">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </div>
+
+    <!-- Projekte -->
+    <h2 id="projects-title">Meine aktuellen Projekte</h2>
+    
+    <div class="project">
+        <a href="#" id="project-1-title">Paintings</a>
+        <p id="project-1-desc">Paintings ist eine Sammlung von Kritzeleien, die zwischen 2020 und 2023 hauptsächlich mit MS Paint erstellt wurden.</p>
+    </div>
+
+    <div class="project">
+        <a href="#" id="project-2-title">OwO Music Player</a>
+        <p id="project-2-desc">Ein Musik-Player, geschrieben in HTML, CSS und JS. Beispiel-Website mit meinen eigenen Songs.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="mailto:jonas.froeb@gmail.com">E-Mail</a> | <a href="https://github.com/jonasftech" target="_blank">GitHub</a>
+    </div>
+</div>
+
+<!-- JavaScript für Sprachumschaltung -->
+<script>
+    const translations = {
+        en: {
+            title: "Hello, I'm Jonas!",
+            intro: "I'm 25 years old, grew up in Munich, and am currently teaching myself programming. My goal is to start an apprenticeship as an application developer. I'm currently focusing on web development and plan to dive into Python next.",
+            skillsTitle: "My Skills",
+            projectsTitle: "My Current Projects",
+            project1Title: "Paintings",
+            project1Desc: "Paintings is a collection of doodles created mainly with MS Paint between 2020 and 2023.",
+            project2Title: "OwO Music Player",
+            project2Desc: "A music player built with HTML, CSS, and JS. Example site featuring my own songs.",
+            skills: ["HTML", "CSS", "JavaScript", "Git & GitHub"]
+        },
+        de: {
+            title: "Hallo, ich bin Jonas!",
+            intro: "Ich bin 25 Jahre alt, in München aufgewachsen und bringe mir derzeit selbstständig das Programmieren bei. Mein Ziel ist es, eine Ausbildung als Fachinformatiker für Anwendungsentwicklung zu absolvieren. Aktuell konzentriere ich mich auf Web Development und plane als Nächstes, mit Python durchzustarten.",
+            skillsTitle: "Meine Fähigkeiten",
+            projectsTitle: "Meine aktuellen Projekte",
+            project1Title: "Paintings",
+            project1Desc: "Paintings ist eine Sammlung von Kritzeleien, die zwischen 2020 und 2023 hauptsächlich mit MS Paint erstellt wurden.",
+            project2Title: "OwO Music Player",
+            project2Desc: "Ein Musik-Player, geschrieben in HTML, CSS und JS. Beispiel-Website mit meinen eigenen Songs.",
+            skills: ["HTML", "CSS", "JavaScript", "Git & GitHub"]
+        }
+    };
+
+    function switchLanguage(lang) {
+        const t = translations[lang];
+        document.getElementById('title').textContent = t.title;
+        document.getElementById('intro').textContent = t.intro;
+        document.getElementById('skills-title').textContent = t.skillsTitle;
+        document.getElementById('projects-title').textContent = t.projectsTitle;
+        document.getElementById('project-1-title').textContent = t.project1Title;
+        document.getElementById('project-1-desc').textContent = t.project1Desc;
+        document.getElementById('project-2-title').textContent = t.project2Title;
+        document.getElementById('project-2-desc').textContent = t.project2Desc;
+
+        const skillsList = document.querySelector('.skills ul');
+        skillsList.innerHTML = t.skills.map(skill => `<li>${skill}</li>`).join('');
+    }
+
+    switchLanguage('de');
+</script>
+
+</body>
+</html>
