@@ -1,0 +1,94 @@
+/* Allgemeine Stile */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  position: relative;
+}
+h1, h2 {
+  color: #2c3e50;
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sprachumschalter */
+.language-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+.language-switch img {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+.language-switch img:hover {
+  transform: scale(1.1);
+}
+
+/* Projekte */
+.project {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+/* Fähigkeiten */
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+.skills li {
+  background-color: #ecf0f1;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+      margin: 20px;
+      padding: 15px;
+  }
+  .language-switch {
+      top: 5px;
+      right: 5px;
+  }
+}
